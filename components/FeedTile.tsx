@@ -1,0 +1,98 @@
+import React, { useState } from "react";
+import { DotsHorizontalIcon } from "@heroicons/react/solid";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import {
+  PaperAirplaneIcon,
+  HeartIcon,
+  ChatIcon,
+  EmojiHappyIcon,
+} from "@heroicons/react/outline";
+
+const FeedTile = () => {
+  //set comment
+  const [comment, setComment] = useState("");
+
+  return (
+    <div className=" rounded my-3 mx-3 border-r border-b border-l border-gray-400">
+      <div className="flex flex-row items-center justify-between">
+        <div className=" flex flex-row items-center ">
+          <div className=" h-[45px] w-[45px]  rounded-full border-pink-600  border-2 bg-transparent flex flex-col items-center justify-center m-3">
+            <img
+              src="https://placekitten.com/200/300"
+              className="h-[38px] w-[38px]  rounded-full  "
+              alt=""
+            />
+          </div>
+          <h1 className=" text-sm font-medium ">leomessi</h1>
+        </div>
+        <DotsHorizontalIcon className="h-5 w-5 mx-2 " />
+      </div>
+      <Carousel showThumbs={false}>
+        <div className=" h-[470px] ">
+          <img src="https://placekitten.com/200/300" className="" />
+        </div>
+        <div className=" h-[470px]">
+          <img src="https://placekitten.com/200/300" />
+        </div>
+      </Carousel>
+      <div className="flex flex-row justify-between my-2 mx-3">
+        <div className="flex flex-row space-x-3 ">
+          <HeartIcon className="h-7 w-7 " />
+          <ChatIcon className="h-7 w-7 " />
+          <PaperAirplaneIcon className="h-7 w-7 " />
+        </div>
+
+        <svg
+          aria-label="Save"
+          color="#262626"
+          fill="#262626"
+          height="24"
+          role="img"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <polygon
+            fill="none"
+            points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          ></polygon>
+        </svg>
+      </div>
+      <div className=" flex flex-row border-b-[1px] border-gray-400 mb-3">
+        <h1 className=" ml-3 mb-2 italic font-bold">24 likes</h1>
+        <h1 className=" ml-3 mb-2 italic">No Comment</h1>
+      </div>
+
+      <div className="flex flex-row space-x-1 items-center my-3 px-3">
+        <EmojiHappyIcon className=" h-5 w-5" />
+        <input
+          placeholder="Add a comment"
+          className=" flex-1 p-1 mx-2 outline-none"
+          onChange={(e) => {
+            const value = e.target.value;
+            //   check if value is not empty
+            if (value && value.length > 0) {
+              //   set the state
+              setComment(value);
+            }else{
+                setComment("");
+            }
+          }}
+        />
+        <button
+          className={`text-blue-500 ${
+            comment.length > 0 ? " opacity-100" : "opacity-50"
+          }  `}
+        >
+          Post
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default FeedTile;
