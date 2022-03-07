@@ -8,10 +8,16 @@ import {
   ChatIcon,
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
+import Image from "next/image";
 
 const FeedTile = () => {
   //set comment
   const [comment, setComment] = useState("");
+  //set likes
+  const [likes, setLikes] = useState(0);
+
+  //create a random number
+  const randomNumber = Math.floor(Math.random() * 100);
 
   return (
     <div className="my-3 mx-3 border border-gray-300 bg-white rounded-lg">
@@ -19,7 +25,7 @@ const FeedTile = () => {
         <div className=" flex flex-row items-center ">
           <div className=" h-[45px] w-[45px]  rounded-full border-pink-600  border-2 bg-transparent flex flex-col items-center justify-center m-3">
             <img
-              src="https://placekitten.com/200/300"
+              src={"https://picsum.photos/200/300" + `?index=${randomNumber}`}
               className="h-[38px] w-[38px]  rounded-full  "
               alt=""
             />
@@ -30,10 +36,15 @@ const FeedTile = () => {
       </div>
       <Carousel showThumbs={false}>
         <div className=" h-[470px] ">
-          <img src="https://placekitten.com/200/300" className="" />
+          <img
+            src={"https://picsum.photos/200/300" + `?index=${randomNumber}`}
+            className=""
+          />
         </div>
         <div className=" h-[470px]">
-          <img src="https://placekitten.com/200/300" />
+          <img
+            src={"https://picsum.photos/200/300" + `?index=${randomNumber}`}
+          />
         </div>
       </Carousel>
       <div className="flex flex-row justify-between my-2 mx-3">
