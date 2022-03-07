@@ -14,7 +14,7 @@ const FeedTile = () => {
   const [comment, setComment] = useState("");
 
   return (
-    <div className=" rounded my-3 mx-3 border-r border-b border-l border-gray-400">
+    <div className="my-3 mx-3 border border-gray-300 bg-white rounded-lg">
       <div className="flex flex-row items-center justify-between">
         <div className=" flex flex-row items-center ">
           <div className=" h-[45px] w-[45px]  rounded-full border-pink-600  border-2 bg-transparent flex flex-col items-center justify-center m-3">
@@ -75,18 +75,16 @@ const FeedTile = () => {
           onChange={(e) => {
             const value = e.target.value;
             //   check if value is not empty
-            if (value && value.length > 0) {
-              //   set the state
-              setComment(value);
-            }else{
-                setComment("");
-            }
+            setComment(value);
           }}
         />
         <button
           className={`text-blue-500 ${
             comment.length > 0 ? " opacity-100" : "opacity-50"
           }  `}
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
         >
           Post
         </button>
