@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DotsHorizontalIcon } from "@heroicons/react/solid";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import {
   PaperAirplaneIcon,
@@ -8,7 +8,6 @@ import {
   ChatIcon,
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
-import Image from "next/image";
 
 const FeedTile = () => {
   //set comment
@@ -73,16 +72,16 @@ const FeedTile = () => {
           ></polygon>
         </svg>
       </div>
-      <div className=" flex flex-row border-b-[1px] border-gray-300 mb-3">
-        <h1 className=" ml-3 mb-2 italic font-bold">24 likes</h1>
-        <h1 className=" ml-3 mb-2 italic">No Comment</h1>
+      <div className="flex flex-row border-b-[1px] border-gray-300 mb-3">
+        <h1 className="ml-3 mb-2 italic font-bold">24 likes</h1>
+        <h1 className="ml-3 mb-2 italic">No Comment</h1>
       </div>
 
       <div className="flex flex-row space-x-1 items-center my-3 px-3">
         <EmojiHappyIcon className=" h-5 w-5" />
         <input
           placeholder="Add a comment"
-          className=" flex-1 p-1 mx-2 outline-none"
+          className="flex-1 p-1 mx-2 outline-none"
           onChange={(e) => {
             const value = e.target.value;
             //   check if value is not empty
@@ -91,7 +90,7 @@ const FeedTile = () => {
         />
         <button
           className={`text-blue-500 ${
-            comment.length > 0 ? " opacity-100" : "opacity-50"
+            comment.length > 0 ? "opacity-100" : "opacity-50"
           }  `}
           onSubmit={(e) => {
             e.preventDefault();

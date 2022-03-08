@@ -1,4 +1,4 @@
-import { Fragment, useRef } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useRecoilState } from "recoil";
 import modalState from "../atoms/modal";
@@ -43,8 +43,8 @@ const PostModal = () => {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className=" h-[400px] w-9/12 max-w-xl  bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all ">
-              <div className=" flex flex-col items-center justify-center h-full">
+            <div className="h-[400px] w-9/12 max-w-xl  bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all ">
+              <div className="flex flex-col items-center justify-center h-full">
                 <Dialog.Title
                   as="h3"
                   className="text-sm leading-6 font-medium text-gray-900 border-gray-300 border-b w-full text-center py-2 "
@@ -52,7 +52,7 @@ const PostModal = () => {
                   Create new post
                 </Dialog.Title>
 
-                <div className=" flex-1 "></div>
+                <div className="flex-1 "></div>
 
                 <svg
                   aria-label="Icon to represent media such as images or videos"
@@ -76,13 +76,13 @@ const PostModal = () => {
                     fill="currentColor"
                   ></path>
                 </svg>
-                <h1 className=" my-3" >
+                <h1 className="my-3" >
                   Drag photos and videos here
                 </h1>
-                <button className=" px-3 py-1 text-white bg-blue-400 rounded-sm ">
+                <button className="px-3 py-1 text-white bg-blue-400 rounded-sm ">
                   Select from computer
                 </button>
-                <div className=" flex-1"></div>
+                <div className="flex-1"></div>
               </div>
             </div>
           </Transition.Child>

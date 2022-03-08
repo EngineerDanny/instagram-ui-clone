@@ -18,12 +18,10 @@ const Sidebar = () => {
     { name: "linda", image: "https://picsum.photos/200/300" },
   ];
 
-  //random image link
-
   return (
     <div className="fixed ">
-      <div className=" my-7 mx-7 ">
-        <div className=" flex flex-row items-center ">
+      <div className="my-7 mx-7 ">
+        <div className="flex flex-row items-center ">
           <Image
             src={profileList[0].image + "?index=user"}
             height={59}
@@ -38,14 +36,14 @@ const Sidebar = () => {
           <button className=" text-blue-500 text-sm font-bold ml-14 ">Switch</button>
         </div>
 
-        <div className=" flex flex-row my-5  ">
-          <h1 className=" p-0  text-sm"> Suggestions For You</h1>
-          <button className=" font-bold text-xs ml-[120px]">See All</button>
+        <div className="flex flex-row my-5  ">
+          <h1 className="p-0  text-sm"> Suggestions For You</h1>
+          <button className="font-bold text-xs ml-[120px]">See All</button>
         </div>
 
-        <div className=" flex flex-col space-y-4 ">
+        <div className="flex flex-col space-y-4 ">
           {profileList.map((item, index) => (
-            <div key={index} className=" flex flex-row ">
+            <div key={index} className="flex flex-row ">
               <div className="flex flex-row items-center">
                 <Image
                   src={item.image + `?index=${index}`}
@@ -59,8 +57,7 @@ const Sidebar = () => {
                     Instagram recommended
                   </span>
                 </div>
-              </div>
-              
+              </div>              
               <button className=" text-blue-500 text-xs font-bold ml-10">Follow</button>
             </div>
           ))}

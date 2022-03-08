@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/solid";
-
 import {
   PaperAirplaneIcon,
   PlusCircleIcon,
@@ -8,7 +7,6 @@ import {
   HeartIcon,
 } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
-
 import avatarIcon from "../public/avatar-default.jpg";
 import { useRecoilState } from "recoil";
 import modalState from "../atoms/modal";
@@ -23,7 +21,7 @@ const NavBar = () => {
   return (
     <div className="border-b-[1px] border-gray-300  px-3 py-2 sticky top-0 z-30 bg-white flex flex-col items-center w-full ">
       <div className="flex flex-row justify-between items-center    max-w-6xl pt-3">
-        <div className=" pt-1 mr-4 ">
+        <div className="pt-1 mr-4 ">
           <Image
             src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
             width={90}
@@ -33,7 +31,7 @@ const NavBar = () => {
           />
         </div>
 
-        <div className=" flex-row bg-gray-100 flex-1 px-2 py-2 mx-2  mr-9 rounded-lg  hidden sm:flex sm:mr-12 md:ml-32 ">
+        <div className="flex-row bg-gray-100 flex-1 px-2 py-2 mx-2  mr-9 rounded-lg  hidden sm:flex sm:mr-12 md:ml-32 ">
           <SearchIcon className="h-6 w-6 text-gray-400" />
 
           <input

@@ -1,6 +1,3 @@
-import React from "react";
-import Image from "next/image";
-
 const Header = () => {
   // The list should contain a list of names of instagram feeds and their image urls
   const list = [
@@ -16,13 +13,13 @@ const Header = () => {
 
   return (
     <div className=" m-3 border border-gray-300 bg-white rounded-lg">
-      <div className=" mt-4 pb-2 flex flex-row overflow-x-visible overflow-scroll scroll-smooth   scrollbar-hide space-x-3 ">
+      <div className=" mt-4 pb-2 flex flex-row overflow-x-visible overflow-scroll scroll-smooth scrollbar-hide space-x-3 ">
         {list.map((item, index) => (
-          <div className=" first:ml-4 flex flex-col items-center">
-            <div className=" h-[70px] w-[70px]  rounded-full border-pink-600  border-2 bg-transparent flex flex-col items-center justify-center">
+          <div className="first:ml-4 flex flex-col items-center">
+            <div className="h-[70px] w-[70px]  rounded-full border-pink-600  border-2 bg-transparent flex flex-col items-center justify-center">
               <img
                 src={item.image + `?index=${index}`}
-                className="h-[63px] w-[63px]  rounded-full  "
+                className="h-[63px] w-[63px] rounded-full  "
                 alt=""
               />
             </div>
@@ -32,7 +29,6 @@ const Header = () => {
           </div>
         ))}
       </div>
-      {/* <div className=" mt-2 w-full h-[1.5px] shadow-md bg-gray-500" /> */}
     </div>
   );
 };
