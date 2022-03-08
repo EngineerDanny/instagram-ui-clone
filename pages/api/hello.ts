@@ -1,4 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// The Backend should basically be storage => local storage, database => sqlite
+// The database will be filled with items
+// User should be able to add or remove items from it
+// Everything should be done locally
+
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
