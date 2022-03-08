@@ -49,9 +49,9 @@ const FeedTile = () => {
       </Carousel>
       <div className="flex flex-row justify-between my-2 mx-3">
         <div className="flex flex-row space-x-3 ">
-          <HeartIcon className="h-7 w-7 " />
-          <ChatIcon className="h-7 w-7 " />
-          <PaperAirplaneIcon className="h-7 w-7 " />
+          <HeartIcon className="h-6 w-6 " />
+          <ChatIcon className="h-6 w-6  " />
+          <PaperAirplaneIcon className="h-6 w-6  " />
         </div>
 
         <svg
@@ -67,13 +67,13 @@ const FeedTile = () => {
             fill="none"
             points="20 21 12 13.44 4 21 4 3 20 3 20 21"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           ></polygon>
         </svg>
       </div>
-      <div className=" flex flex-row border-b-[1px] border-gray-400 mb-3">
+      <div className=" flex flex-row border-b-[1px] border-gray-300 mb-3">
         <h1 className=" ml-3 mb-2 italic font-bold">24 likes</h1>
         <h1 className=" ml-3 mb-2 italic">No Comment</h1>
       </div>
