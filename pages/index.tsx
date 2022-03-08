@@ -5,6 +5,7 @@ import FeedTile from "../components/FeedTile";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Sidebar from "../components/Sidebar";
+import PostModal from "../components/PostModal";
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,9 @@ const Home: NextPage = () => {
           <Sidebar />
         </div>
       </main>
+      {/* Create a dialog here */}
+      <PostModal/>
+   
     </div>
   );
 };
